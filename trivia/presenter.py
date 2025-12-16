@@ -38,7 +38,7 @@ class QuestionPresenter:
         for index, option in enumerate(options):
             print(f"{index + 1}. {option}")
         user_answer = get_integer_in_range(
-            f"Enter answer option (integer 1-{len(options)}: ", 1, 4, False
+            f"Enter answer option (integer 1-{len(options)}: ", 1, len(options), False
         )
 
         if options[user_answer - 1] == self.correct_answer:
